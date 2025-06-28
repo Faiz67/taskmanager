@@ -8,6 +8,7 @@ A FastAPI-based task management system with user authentication, PostgreSQL, and
 - JWT-based authentication with session management via Redis
 - CRUD operations for tasks
 - PostgreSQL for persistent storage
+- **Interactive API documentation available at** [`/docs`](http://localhost:8000/docs) **(Swagger UI)**
 
 ---
 
@@ -129,6 +130,16 @@ Cookie: x-session-token=your_token
 
 ---
 
+## API Documentation
+
+You can interact with and test all endpoints using the **Swagger UI** at:
+
+```
+http://localhost:8000/docs
+```
+
+---
+
 ## Notes
 
 - All endpoints (except registration, login, and database initialization) require authentication via the `x-session-token` cookie.
@@ -136,6 +147,4 @@ Cookie: x-session-token=your_token
 
 ---
 
-## License
-
-MIT
+##
