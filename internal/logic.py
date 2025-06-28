@@ -115,7 +115,7 @@ async def edit_existing_task(task_details):
     """
     with connection() as conn:
         try:
-            query = "UPDATE tasks set title=%(title)s, description=%(description)s, updated_at=now() WHERE id=%(id)s and userid=%(userid)s"
+            query = "UPDATE tasks set title=%(title)s, description=%(description)s, updated_at=now(), completed=%(completed)s WHERE id=%(id)s and userid=%(userid)s"
 
             conn.execute(query, params=task_details)
             conn.commit()

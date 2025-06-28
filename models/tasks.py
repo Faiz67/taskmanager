@@ -8,12 +8,12 @@ class BaseTask(BaseModel):
 
     title: str
     description: str
+    completed: Optional[bool] = False
 
 
 class Task(BaseTask):
     model_config = ConfigDict(from_attributes=True)
 
     id: Optional[int] = None
-    completed: Optional[bool] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
